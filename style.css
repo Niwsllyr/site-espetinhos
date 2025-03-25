@@ -1,0 +1,162 @@
+/* style.css */
+
+/* Layout básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #333; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff6600; /* Cor laranja */
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #ff6600; /* Laranja */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65c00; /* Cor laranja mais escura para o efeito hover */
+}
+
+button:disabled {
+    background-color: #ccc; /* Botão desabilitado */
+}
+
+/* Estilo das seções de pedido */
+.pedido-section {
+    background-color: #444; /* Fundo escuro para as seções */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pedido-section h3 {
+    color: #ff6600;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Box do pedido */
+.pedido-info {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+/* Estilo para o link do WhatsApp */
+#finalizarPedido {
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #ff6600;
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 30px;
+    color: #ccc;
+    font-size: 14px;
+    text-align: center;
+}
+
+footer a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .pedido-section {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .pedido-section h3 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .pedido-section h3 {
+        font-size: 18px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
