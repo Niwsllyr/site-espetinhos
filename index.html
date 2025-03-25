@@ -1,82 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu de Espetinhos</title>
-    <style>
-        /* Aqui começa o CSS (estilos) do site */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        h1 {
-            color: #333;
-            padding: 20px;
-        }
-        .menu {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-        .item {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 10px;
-            margin: 10px;
-            width: 200px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .item img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .item h3 {
-            margin: 10px 0;
-        }
-        .item button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .item button:hover {
-            background-color: #218838;
-        }
-    </style>
+    <title>Espetinho Delivery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Faça Seu Pedido de Espetinho</h1>
 
-    <h1>Menu de Espetinhos</h1>
-
-    <div class="menu">
-        <div class="item">
-            <img src="https://via.placeholder.com/150" alt="Espetinho de Frango">
-            <h3>Espetinho de Frango</h3>
-            <button onclick="addToWhatsApp('Espetinho de Frango')">Selecionar</button>
-        </div>
-        <div class="item">
-            <img src="https://via.placeholder.com/150" alt="Espetinho de Carne">
-            <h3>Espetinho de Carne</h3>
-            <button onclick="addToWhatsApp('Espetinho de Carne')">Selecionar</button>
-        </div>
-        <!-- Adicione mais itens aqui -->
+    <!-- Escolha do Espeto -->
+    <div class="pedido-section">
+        <h3>Escolha o Espeto:</h3>
+        <label><input type="checkbox" class="espeto" data-nome="Gado" data-preco="18"> Gado - R$18,00</label><br>
+        <label><input type="checkbox" class="espeto" data-nome="Frango" data-preco="15"> Frango - R$15,00</label><br>
+        <label><input type="checkbox" class="espeto" data-nome="Toscana" data-preco="15"> Toscana - R$15,00</label><br>
+        <label><input type="checkbox" class="espeto" data-nome="Gado e/com Toscana" data-preco="15"> Gado e/com Toscana - R$15,00</label><br>
+        <label><input type="checkbox" class="espeto" data-nome="Gado e/com Frango" data-preco="15"> Gado e/com Frango - R$15,00</label><br>
+        <label><input type="checkbox" class="espeto" data-nome="Toscana e/com Frango" data-preco="15"> Toscana e/com Frango - R$15,00</label><br>
+        <label><input type="checkbox" class="espeto" data-nome="Gado, Frango e Toscana" data-preco="15"> Gado, Frango e Toscana - R$15,00</label><br>
     </div>
 
-    <script>
-        function addToWhatsApp(item) {
-            const whatsappMessage = `Eu gostaria de pedir: ${item}`;
-            const whatsappLink = `https://wa.me/5598985349559?text=${encodeURIComponent(whatsappMessage)}`;
-            window.location.href = whatsappLink;
-        }
-    </script>
+    <!-- Escolha do Arroz -->
+    <div class="pedido-section">
+        <h3>Escolha o Arroz:</h3>
+        <label><input type="checkbox" class="arroz" data-nome="Baião de Dois"> Baião de Dois</label><br>
+        <label><input type="checkbox" class="arroz" data-nome="Arroz de Cenoura"> Arroz de Cenoura</label>
+    </div>
 
+    <!-- Escolha dos Acompanhamentos -->
+    <div class="pedido-section">
+        <h3>Escolha os Acompanhamentos:</h3>
+        <label><input type="checkbox" class="acompanhamentos" data-nome="Salada"> Salada</label><br>
+        <label><input type="checkbox" class="acompanhamentos" data-nome="Purê de Batata"> Purê de Batata</label><br>
+        <label><input type="checkbox" class="acompanhamentos" data-nome="Vatapá de Camarão"> Vatapá de Camarão Com Pimenta</label><br>
+        <label><input type="checkbox" class="acompanhamentos" data-nome="Vatapá de Camarão"> Vatapá de Camarão Sem Pimenta</label><br>
+        <label><input type="checkbox" class="acompanhamentos" data-nome="Farofa"> Farofa</label>
+    </div>
+
+    <!-- Botão de Finalização -->
+    <button id="finalizarPedido" onclick="finalizarPedido()">Finalizar Pedido</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
